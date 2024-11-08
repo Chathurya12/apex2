@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Sculpture Gallery</title>
+    <link rel="stylesheet" href="sculp.css">
+</head>
+<body>
+    <header>
+        
+        <nav>
+
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="home" class="grid-item">
+            <h2>Welcome to the Sculpture Gallery</h2>
+            <p>Explore a collection of sculptures that capture the essence of human creativity and emotion. Our gallery showcases timeless pieces crafted by talented artists from around the world.</p>
+        </section>
+
+        <section id="gallery" class="grid-item">
+            <h2>Sculpture Collection</h2>
+            <div class="gallery-grid">
+                <img src="https://res.cloudinary.com/diesyy6ac/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731082028/0ea0170e-621c-4057-a667-ea6be235f60b_pl5dzd.jpg" alt="Sculpture 1">
+                <img src="https://res.cloudinary.com/diesyy6ac/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731082091/love-sculpture-1_qd3bia.jpg" alt="Sculpture 2">
+                <img src="https://res.cloudinary.com/diesyy6ac/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731082162/have-you-ever-noticed-how-all-these-ancient-greek-and-roman-v0-tonkzwklc19c1_w1zkkq.webp" alt="Sculpture 3">
+                <img src="https://res.cloudinary.com/diesyy6ac/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731082265/indian-sculpturess-shadnagar-mahabubnagar-statue-manufacturers-ifc13yr04e_rbgug7.avif" alt="Sculpture 4">
+                <img src="https://res.cloudinary.com/diesyy6ac/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731082149/ancient-greece-obelisk-art-history_pthsnh.webp" alt="Sculpture 5">
+                <img src="https://res.cloudinary.com/diesyy6ac/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731082215/2986326433_31321249f6_o_gpx8fb.jpg" alt="Sculpture 6">
+            </div>
+        </section>
+
+        <section id="services" class="grid-item">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <h3>Sculpture Consultations</h3>
+                    <img src="https://res.cloudinary.com/diesyy6ac/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731082180/1176_wamh1z.jpg" alt="Sculpture Consultations">
+                    <p>Receive guidance on selecting sculptures for your collection.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Custom Sculptures</h3>
+                    <img src="https://res.cloudinary.com/diesyy6ac/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731082231/8c831ee8-426f-427a-bd17-61e5b896fd17-0_dqd2yp.webp" alt="Custom Sculptures">
+                    <p>Commission a custom sculpture to suit your unique taste.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Exhibitions</h3>
+                    <img src="https://res.cloudinary.com/diesyy6ac/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731084262/b3d9ae62-4f1d-4e32-9473-2d3ad137ba32_qzywfy.jpg" alt="Exhibitions">
+                    <p>Host or attend special exhibitions and events.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Artist Representation and Promotion</h3>
+                    <img src="https://res.cloudinary.com/diesyy6ac/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731084260/8705013562776586c97a08652f47606d_AP22018475998662-1_scnaub.jpg" alt="Custom Sculptures">
+                    <p>Represent and promote emerging and exhibition opportunities.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Virtual Sculpture Gallery Tours</h3>
+                    <img src="https://res.cloudinary.com/diesyy6ac/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731082246/a97ca767159743a485eed1a9c5c64244_cxrmej.webp" alt="Custom Sculptures">
+                    <p>Guided virtual tours showcasing and providing an immersive experience for remote visitors.</p>
+                </div>
+            </div>
+        </section>
+        <h2>To-Do List</h2>
+        <input type="text" id="todoInput" placeholder="Add a new task">
+        <button onclick="addTodo()">Add Task</button>
+        <ul id="todoList"></ul>
+
+        <section id="contact" class="grid-item">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="password" id="password" placeholder="Create Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="imageSection" class="grid-item" style="display:none;">
+            <h2>Submit an Image</h2>
+            <form id="imageForm">
+                <input type="url" id="imageUrl" placeholder="Paste Image URL" required>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="imagePreview" style="margin-top: 20px;">
+                <!-- The image will be displayed here after submission -->
+            </div>
+        </section>
+    
+
+    
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
