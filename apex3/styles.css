@@ -1,0 +1,278 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://res.cloudinary.com/dupstdgwz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731783283/17985016-abstract-light-space-technology-circuit-computer-background-vector-illustration_roaphv.jpg'); /* Add your image path here */
+    background-size: cover; /* Makes sure the image covers the whole viewport */
+    background-position: center center; /* Center the image in the viewport */
+    background-attachment: fixed; /* Ensures the background stays fixed while scrolling */
+    color: white; /* Optional: Change text color for better visibility on dark images */
+}/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #181846;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Header Section */
+header {
+    background-color: #301b53;
+    color: #fff;
+    padding: 15px 0;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Main Container for All Sections */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Sections Styling */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+/* Home Section */
+h2 {
+    font-family: 'Georgia', serif;
+    color: #352260;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.1em;
+    color: #121246;
+    margin: 20px 0;
+}
+
+/* Gallery Section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    justify-items: center;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.1);
+}
+
+/* Quiz Section Styling */
+.quiz-container {
+    margin: 20px auto;
+    background-color: #f9fafb;
+    color: rgb(24, 24, 66);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(61, 44, 78, 0.2);
+}
+
+.quiz-container h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+.quiz-image {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.options button {
+    background-color: #eff3f3;
+    border: none;
+    color: rgb(22, 15, 64);
+    padding: 15px 25px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.options button:hover {
+    background-color: #343a40;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Joke Section Styling */
+.joke-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(56, 34, 128, 0.1);
+    font-family: 'Georgia', serif;
+    font-size: 1.6em;
+}
+
+.joke-container button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 1.5em;
+    transition: background-color 0.3s ease;
+}
+
+.joke-container button:hover {
+    background-color: #c0392b;
+}
+
+/* Weather Section Styling */
+.api-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(21, 43, 110, 0.1);
+    font-size: 1.6em;
+    font-family: 'Georgia', serif;
+}
+
+#cityInput {
+    padding: 10px;
+    width: 200px;
+    margin-right: 10px;
+    font-size: 1em;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #271e55;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    
+}
+
+button:hover {
+    background-color: #3c1f80;
+}
+h3 {
+    font-family: 'Georgia', serif;
+    color: #352260;
+    font-size: 2rem;
+}
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+/* Gallery Carousel Section Styling */
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden; /* Hides overflow to show only one image at a time */
+}
+
+/* Carousel Images */
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding effect */
+}
+
+.carousel-image {
+    width: 100%;
+    object-fit: cover; /* Ensures the image fits the container while preserving aspect ratio */
+    max-width: 300px; /* Optional: Control the max width of images */
+    height: 200px; /* Set a fixed height */
+}
+
+/* Carousel Navigation Buttons */
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    #cityInput {
+        width: 150px;
+    }
+}

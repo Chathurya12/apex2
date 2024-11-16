@@ -1,0 +1,104 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science and Technology Fun</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#quiz-section" class="nav-link">Quiz</a></li>
+                <li><a href="#joke-section" class="nav-link">Joke</a></li>
+                <li><a href="#weather-section" class="nav-link">Weather</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Home Section -->
+        <section id="home" class="grid-item">
+            <h2>Welcome to Science and Technology Fun!</h2>
+            <p>Explore fascinating scientific facts and technologies that shape our world. Learn, have fun, and enjoy the challenge of quizzes and jokes!</p>
+        </section>
+
+        </section>
+
+        <section id="gallery" class="grid-item">
+            <h2>Science Gallery</h2>
+            <div class="gallery-grid">
+                <img src="https://res.cloudinary.com/dupstdgwz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731779012/20240817_STP002_hhqlq3.webp" alt="Science Art 1">
+                <img src="https://res.cloudinary.com/dupstdgwz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731779023/41277197470_7e5e500476_b_ya8tqc.jpg" alt="Science Art 2">
+                <img src="https://res.cloudinary.com/dupstdgwz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731779162/The_kinetic_gallery_at_PARSEC_Jayanagar_dyufqw.jpg" alt="Science Art 3">
+                <img src="https://res.cloudinary.com/dupstdgwz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731779007/70_umpyzo.png" alt="Science Art 4">
+                
+                
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz-section" class="section">
+            <div class="quiz-container" id="quizContainer">
+                <h3>Quiz Time</h3>
+                <img id="quizImage" class="quiz-image" src="" alt="Quiz Clue">
+                <p id="question" class="question"></p>
+                <div id="options" class="options"></div>
+                <div class="result" id="quizResult"></div>
+            </div>
+        </section>
+
+        <!-- Joke Section -->
+        <section id="joke-section" class="section">
+            <div class="joke-container">
+                <h3>Joke Time</h3>
+                <p id="jokeEmoji">😂</p>
+                <p id="joke"></p>
+                <button onclick="fetchJoke()">Get Another Joke</button>
+            </div>
+        </section>
+            
+        <!-- Weather Section -->
+        <section id="weather" class="section">
+            <div class="api-container">
+                <h3>Check the Weather</h3>
+                <input type="text" id="cityInput" placeholder="Enter city name">
+                <button onclick="getWeather()">Get Weather</button>
+                <p id="weather"></p>
+            </div>
+        </section>
+    </div>
+
+
+         <!-- Gallery Carousel Section -->
+         <section id="galleryCarousel" class="gallery-section">
+            <div class="carousel-container">
+                <h3>Gallery Carousel</h3>
+                <div class="carousel-images">
+                    <img src="https://res.cloudinary.com/dupstdgwz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731779145/premium_photo-1683121713210-97667d2e83c8_pnnqy0.jpg" alt="Image 1" class="carousel-image">
+                    <img src="https://res.cloudinary.com/dupstdgwz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731779119/photo-1713557112617-e12d67bddc3a_bhd1c2.jpg" alt="Image 2" class="carousel-image">
+                    <img src="https://res.cloudinary.com/dupstdgwz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731779149/sei189463997_ela4cx.webp" alt="Image 3" class="carousel-image">
+                    <img src="https://res.cloudinary.com/dupstdgwz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731779126/premium_photo-1661817214148-2d4cf768a7c3_hhungw.jpg" alt="Image 4" class="carousel-image">
+                    <img src="https://res.cloudinary.com/dupstdgwz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731783034/shutterstock_2464071963.2e16d0ba.fill-1600x750-c100_atovze.jpg" alt="Image 4" class="carousel-image">
+                    <img src="https://res.cloudinary.com/dupstdgwz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731783032/3v8PB95CCSn86e5fowthRAybW4ajSY18z2FfVPi2spk_vwy3cv.jpg" alt="Image 4" class="carousel-image">
+                    <img src="https://res.cloudinary.com/dupstdgwz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731783022/1_zPR9rL2kmOb27gOG_d6X5w_utirjr.png" alt="Image 4" class="carousel-image">
+                    <img src="https://res.cloudinary.com/dupstdgwz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1731783295/pexels-pixabay-256381_icomia.jpg" alt="Image 4" class="carousel-image">
+                </div>
+                <button class="carousel-btn left" onclick="moveCarousel(-1)">&#10094;</button>
+                <button class="carousel-btn right" onclick="moveCarousel(1)">&#10095;</button>
+            </div>
+        </section>
+
+     
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Interactive Web Page</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
